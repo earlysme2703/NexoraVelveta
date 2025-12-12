@@ -7,7 +7,7 @@ export default function Home() {
       <nav className="absolute top-0 left-0 z-20 w-full p-6 flex flex-col md:flex-row justify-between items-center bg-transparent">
         <div className="text-2xl font-bold tracking-widest text-[#6A1B9A] mb-4 md:mb-0">NEXORAVELVETA</div>
         <div className="flex gap-4 md:gap-8 text-xs md:text-sm font-semibold text-gray-600 uppercase tracking-widest flex-wrap justify-center">
-          <a href="#packages" className="hover:text-primary transition-colors">Manisan Kami</a>
+          <a href="#home" className="hover:text-primary transition-colors">Home</a>
           <a href="#about" className="hover:text-primary transition-colors">Tentang</a>
           <a href="#menu" className="hover:text-primary transition-colors">Menu</a>
           <a href="#contact" className="hover:text-primary transition-colors">Kontak</a>
@@ -15,7 +15,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative flex min-h-screen w-full flex-col md:flex-row items-center justify-between px-4 md:px-20 pt-32 md:pt-24 pb-12 bg-[#F8F5FC]">
+      <section id="home" className="relative flex min-h-screen w-full flex-col md:flex-row items-center justify-between px-4 md:px-20 pt-32 md:pt-24 pb-12 bg-[#F8F5FC]">
         {/* Left Content */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start z-10 text-center md:text-left">
           <h1 className="font-script text-[2rem] md:text-[5rem] leading-none text-[#9575CD] opacity-100 transform md:-mb-2">
