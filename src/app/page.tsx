@@ -116,19 +116,42 @@ export default function Home() {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-8 relative z-10">
            {/* Cards */}
            {[
-             { title: "Purple Velvet Cheese", price: "Rp.10000", img: "/images/onemain.png", imgClass: "object-cover" },
-             { title: "Spring rolls Velvet", price: "Rp.8000", img: "/images/two.png", imgClass: "object-contain p-4" },
-             { title: "Violet Bites", price: "Rp.5000", img: "/images/three.png", imgClass: "object-cover" }
+             { title: "Purple Velvet Cheese", price: "Rp.10000", img: "/images/onemain.png", imgClass: "object-cover", desc: "Perpaduan lembut ubi ungu dan krim keju." },
+             { title: "Spring rolls Velvet", price: "Rp.8000", img: "/images/two.png", imgClass: "object-contain p-4", desc: "Lumpia renyah isi ubi ungu lumer." },
+             { title: "Violet Bites", price: "Rp.5000", img: "/images/three.png", imgClass: "object-cover", desc: "Bola-bola ubi ungu manis." }
            ].map((item, idx) => (
              <div key={idx} className="flex flex-col items-center">
-                <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full bg-white/10 flex items-center justify-center mb-6 border-2 border-white/20 transition-transform hover:scale-105 hover:bg-white/20 overflow-hidden">
-                    <Image 
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      className={item.imgClass}
-                    />
-                </div>
+                 <div className="relative">
+                    <div className="group relative w-56 h-56 md:w-64 md:h-64 rounded-full bg-white/10 flex items-center justify-center mb-6 border-2 border-white/20 transition-transform hover:scale-105 hover:bg-white/20 overflow-hidden">
+                        <Image 
+                          src={item.img}
+                          alt={item.title}
+                          fill
+                          className={item.imgClass}
+                        />
+                        {/* Hover Description Overlay */}
+                        <div className="absolute inset-0 bg-black/75 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                           <p className="text-white text-xs md:text-sm font-medium text-center leading-relaxed">
+                              {item.desc}
+                           </p>
+                        </div>
+                    </div>
+
+                    {/* Floating Badges: Varian Coklat & Keju (Premium Look) */}
+                    {item.title === "Spring rolls Velvet" && (
+                       <>
+                          {/* Varian Coklat Badge - Top Right */}
+                          <div className="absolute top-6 -right-4 z-30 bg-[#512000] text-[#ede6f0] text-[9px] font-bold px-3 py-1 rounded-full shadow-lg uppercase tracking-wider transform transition-transform hover:scale-110 hover:-rotate-3">
+                             Varian Coklat
+                          </div>
+                          
+                          {/* Varian Keju Badge - Top Left (Zigzag High) */}
+                          <div className="absolute top-0 left-0 z-30 bg-[#e59900da] text-[#ede6f0] text-[9px] font-bold px-3 py-1 rounded-full shadow-lg uppercase tracking-wider transform transition-transform hover:scale-110 hover:rotate-3">
+                             Varian Keju
+                          </div>
+                       </>
+                    )}
+                 </div>
                 <h3 className="text-xl font-bold uppercase tracking-widest mb-1">{item.title}</h3>
                 <p className="text-lg font-script text-[#FFD54F]">hanya <span className="text-3xl font-bold text-white font-sans">{item.price}</span></p>
                 <a 
