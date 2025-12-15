@@ -109,16 +109,16 @@ export default function Home() {
         <div className="text-center mb-12 md:mb-16 px-4">
            <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Menu Kami</h2>
            <p className="mt-4 text-white/70 max-w-lg mx-auto text-xs">
-              Jelajahi pilihan profil manis kami yang telah dikurasi. Dari kue beludru hingga awan gula.
+              Jelajahi pilihan profil manis kami yang telah dibuat dengan bahan pilihan. Dari purple velvet cheese hingga violet bites.
            </p>
         </div>
 
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-8 relative z-10">
            {/* Cards */}
            {[
-             { title: "Purple Velvet Cheese", price: "Rp.10000", img: "/images/onemain.png", imgClass: "object-cover", desc: "Perpaduan lembut ubi ungu dan krim keju." },
-             { title: "Spring rolls Velvet", price: "Rp.8000", img: "/images/two.png", imgClass: "object-contain p-4", desc: "Lumpia renyah isi ubi ungu lumer." },
-             { title: "Violet Bites", price: "Rp.5000", img: "/images/three.png", imgClass: "object-cover", desc: "Bola-bola ubi ungu manis." }
+             { title: "Purple Velvet Cheese", price: "Rp.15000", img: "/images/onemain.png", imgClass: "object-cover", desc: "Perpaduan lembut ubi ungu dan krim keju." },
+             { title: "Spring rolls Velvet", price: "Rp.10000", img: "/images/two.png", imgClass: "object-contain p-4", desc: "Lumpia renyah isi ubi ungu lumer." },
+             { title: "Violet Bites", price: "Rp.10000", img: "/images/three.png", imgClass: "object-cover", desc: "Bola-bola ubi ungu manis." }
            ].map((item, idx) => (
              <div key={idx} className="flex flex-col items-center">
                  <div className="relative">
